@@ -1,10 +1,19 @@
 pipeline {
-    agent {'master'}
-    stages {
-        stage('build') {
-            steps {
-                sh 'mvn --version'
-            }
+  agent any
+  stages {
+  stage('Stage 1') {
+      steps {
+        script {
+          echo 'Stage 1'
         }
+      }
     }
+  stage('Stage 2') {
+      steps {
+        script {
+          echo 'Stage 2'
+        }
+      }
+    }
+  }
 }
